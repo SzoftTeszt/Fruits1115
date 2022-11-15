@@ -14,6 +14,7 @@ body{
     background: #ddd;
     font-family: 'Roboto', sans-serif;
 }
+img{width:100%}
 #container{
     max-width: 1000px;
     margin:0 auto;
@@ -26,7 +27,6 @@ body{
     left:0;
     right:0;
 }
-
 
 #nav #hambi-gomb{
     display: none;
@@ -43,14 +43,91 @@ body{
     padding: 10px;
     display: block;
     float:right;
-    margin:5px 7px 0 0;
+    margin:7px 7px 0 0;
 }
 #hamburger span{
     background: white;
     height: 5px;
     margin-bottom: 5px;
     display: block;
+    border-radius: 3px;
 }
 #hamburger span:last-child{
     margin-bottom: 0;
+}
+#nav ul li{
+    border-bottom: 1px solid rgba(255,255,255,.3);
+}
+#nav ul li:first-child{
+    padding: 1.5rem 1rem;
+    color:  rgba(255,255,255,.3);
+}
+#nav ul li a{
+    text-decoration: none;
+    color:white;
+    padding: 1.5rem 1rem;
+    display: inline-block;
+}
+#nav ul li:not(:first-child){
+    display: none;
+}
+#hambi-gomb:checked ~ ul li:not(:first-child){
+    display: block;
+}
+#main h1{
+    font-weight: 100;
+    font-size: 5rem;
+    margin:5rem 0 2rem 0;
+}
+#main>img{
+    width:50%;
+    border-radius: 50%;
+    margin:0 auto;
+    display: block;
+    margin-bottom: 1rem;
+}
+#main>p{
+    line-height: 1.7;
+}
+#main>h2{
+    font-size: 2rem;
+    font-weight: 300;
+    margin:3rem 0 2rem 0;
+}
+#main .box{
+    background: white;
+    margin-bottom: 1rem;
+}
+#main .box .box-content{
+    padding: .6rem;
+}
+.box-content h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin:1.5rem 0 1rem 0; 
+}
+.box-content p{
+    font-size: .9rem;
+    line-height: 1.5;
+}
+.box-content a{
+    margin:1rem 0;
+    padding: .5rem 1rem; 
+    display: inline-block;
+    color:white;
+    text-decoration: none;
+    border-radius: 5px;
+    background: #86b604;
+}
+@media (min-width:768px)
+{
+    #main>img{
+        float:right;
+        width:40%;
+    }
+    #main::after{
+        content: '';
+        clear: both;
+        display: table;
+    }
 }
